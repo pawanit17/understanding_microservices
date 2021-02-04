@@ -52,6 +52,30 @@ The main need for Microservices is to prevent a single point of failure for the 
 2. Not all applications need to be broken into Microservices - there is no right or wrong software architecture pattern. It is specific to the characteristics of the application that you are developing.
 
 
+# Components of a Microservice based application
+
+## REST API
+APIs exposed over the internet which can be accessed via REST standard.
+CRUD operations in REST API world are leveraged by the HTTP methods - POST, GET, PUT/PATCH, DELETE respectively.
+The response is typically JSON, but could also be XML.
+Most applications offer REST API for integration with other services/products.
+
+## API Gateway
+Acts as a reverse proxy and handles all the incoming requests from the end users onto the application.
+Forwards the request to the appropriate Microservice.
+Can also handle authentications, ssl terminations and load balancing.
+Prevents the exposure of the Microservices directly to the end users.
+
+## Event Bus
+In a decoupled Microservices arcitecture, Microservices communicate with each other by placing messages onto a bus.
+This is the publisher/subscribe design pattern.
+
+## Securing Microservices
+Using OAuth 2.0 which prevents credential sharing.
+Authentication to be done at API Gateway.
+When implementing custom authentication schemes, prefer JWT.
+
+
 
 
 
