@@ -75,6 +75,113 @@ Using OAuth 2.0 which prevents credential sharing.
 Authentication to be done at API Gateway.
 When implementing custom authentication schemes, prefer JWT.
 
+# Key Practises
+## Logging
+Events published to event bus
+Response times
+Exceptions
+Login activities and access token requests
+
+## Monitoring
+Uptime of Microservices
+Average response time
+Resource consumptino of each Microservices
+Success and failure ratio of Microservices
+Access Frequency of client requests
+
+## Documentation
+API and Design documentation - what all are available for consumption
+Depoyment view of architecture
+Network and port allocations
+Dependencies
+
+## Container Technologies
+Containerization of the application is the best option for deployment of Microservices.
+1. Docker
+2. LXC Linux containers
+
+An orchestration engine is also a very good addition.
+1. Kubernetes
+2. Docker Swarm
+3. OpenShift
+4. Amazon Elastic Container Service
+5. Azure Kubernetes Services
+
+## Tools and Technologies
+Sprint Boot, Helidon
+.Net Core
+Molecular - NodeJS
+
+## Service Discovery - Determining what services are available for communication
+1. Consul
+2. Apache Zookeeper
+3. Etcd
+
+## API Gateways
+1. Kong
+2. Ambassador
+3. Amazon AWS API Gateway
+4. Azure Application Gateway
+5. Spring Cloud Gateway
+
+## Event Bus
+1. Kafka - perfect fit.
+2. RabbitMQ
+3. Azure Service But
+4. Amazon Simple Queue Service
+5. Google Cloud Pub/Sub
+
+## Logging Tools
+1. Fluentd
+2. Kibana
+3. Logstash
+4. Suro
+
+## Monitoring Tools
+1. Grafana
+2. Prometheus
+
+## Documentation Tools
+1. Swagger UI
+2. Apiary
+3. Readme.io
+4. Slate
+5. Gelato
+6. Aglio
+
+## Testing Tools
+1. Postman
+2. Hoverfly
+3. Pact
+4. Gatling
+5. REST-Assured
+
+# Converting a Monolithic to a Microservice
+1. Identify all the different features the current application provides.
+2. Define new set of Microservices ( by taking into account the design principles ) for the functionality offerred above.
+3. Pick a non-critical Microservice for the first implementation and design it RESTfully.
+4. Implement an API Gateway between user interface and Microservices.
+5. Connect to database avoiding single point of failure.
+6. Implement event bus and few critical micro services and define the events during which one Microservice needs to interact with the other one.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
