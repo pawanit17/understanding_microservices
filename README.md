@@ -38,4 +38,21 @@ Each Microservice has to be responsible for a single system of the entire applic
 
 ### Autonomy vs Code/Data Reusability
 
-The main need for Microservices is to prevent a single point of failure for the applications. If two Microservices share code or if they are tightly dependent on each other, it increases the coupling of the system which would make the application hard to maintain. So always prefer autonomy to reusability. This also helps them to fail independently to each other - example, if the rating system goes down / crashes, it should not and will not halt the ML recommendation system from functioning.
+The main need for Microservices is to prevent a single point of failure for the applications. If two Microservices share code or if they are tightly dependent on each other, it increases the coupling of the system which would make the application hard to maintain. So always prefer autonomy to reusability. This also helps them to fail independently to each other - example, if the rating system goes down / crashes, it should not and will not halt the ML recommendation system from functioning. This is another way of saying that there should not be any single point of failure.
+
+## Benefits
+
+1.Different parts of the system could be written in different languages. Ex: ML recommendation system in Python, Product profile page in NodeJs, Rating and comments section in Java. The different Microservices can use their own suitable database.
+2.Creates an architecture that is highly scalable.
+3.Reduces the risk of introducing breaking changes.
+4.Smaller, manageable code base for each system which is represented by its Microservice.
+
+## Antipatterns
+1. Database replication is needed when developing solutions via Microservices. Otherwise it introduces a single point of failure.
+2. Not all applications need to be broken into Microservices - there is no right or wrong software architecture pattern. It is specific to the characteristics of the application that you are developing.
+
+
+
+
+
+
