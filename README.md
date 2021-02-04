@@ -1,2 +1,25 @@
-# understanding_microservices
-A collection from various sources on Microservices
+# Understanding Microservices
+This repo is about introducing and documenting what Microservices mean, their advantages and the things one should be wary of while implementing them. I have referred to a variety of courses and videos to arrive at this content.
+
+# Introduction
+Most web applications are bundled into a single executable Jar/War/Ear file that contains the application code packaged. This bundled package then serves the client pages along with the services that perform business logic and database connection configurations. This type of application architecture where everything is bundled together is described as a Monolithic architecture. Note that typically the database is not part of this bundle and also the inside the bundle the code and resources could be organized well in terms of module. But having organized code/resources in a bundle does not mean it is not Monolithic - it still is a Monolithic, because it presents a single point of failure and also, each of the components which are modularized inside the bundle could not be scaled seperately - you either scale the Monolith or you do not scale it at all.
+
+This approach has worked well over the years. In fact most applications still follow this way of working. Most web based applications or even commercial applications like SAP, Salesforce etc, are either hosted on cloud or on local premise and their demand is more or less stable. In other words, there wont be very huge spikes when it comes to the usability of these applications. This however, is a problem for applications which need to scale parts of it as per demand.
+
+However, if you consider products/websites like Amazon or Netflix, their demand has sharp spikes. Amazon offers Great Indian Sale to Indian geography where the products are offerred at a high discount. Netflix too had similar StreamFest option where people could see its content without any fee. Events like these spark surge in usage of these applications. As an example, in 2019, during Amazon sale, 56 billion extra requests are received to Amazon's database. Source: https://analyticsindiamag.com/how-big-techs-are-powering-big-billion-day-sales/
+
+This level of surge means that the team at Amazon should be prepared for such huge spikes as well in advance. In other words, their application has to scale to support users. Interesting to note that an average user waits for 2 seconds ( source: https://www.researchgate.net/publication/220893869_A_Study_on_Tolerable_Waiting_Time_How_Long_Are_Web_Users_Willing_to_Wait ) for an application result and leaves the page after that. So this means this is a serious issue which products like these need to consider.
+
+# Problem 1: Scaling
+
+In the above examples, it is interesting to note that both Amazon website itself and Netflix are hosted on AWS cloud. You can scale your applications on cloud. But if your application itself is a Monolith, you are losing an important advantage.
+
+Going back to the previous example, on those sale days, chances are, most people are window shopping, ordering items or placing return of purchased items. There may not be such similar increase in people writing comments or giving feedback about the products. In other words, if Amazon were built as a monolith, it may have seperate modules for order management, user wishlist management, review & rating system, comment system, an ML recommendation system,  customer service chatbot system etc bundled into a single war/jar/ear file. If a scale of the application is needed, all of the modules would also scale. So there is no option to scale everything except review & rating system and comment system. Scaling them up is an unavoidable side affect of scaling the application itself.
+
+# Problem 2: Testing
+
+Since all the modules are part of the same deliverable, no matter how docile a change is done to the rating system, there could always be a chance that the ML recommendation system be thrown into regression.
+
+# Enter Microservices
+
+One solution to solving this problem is via Microservices. In our example, instead of having a single bundled file, if we have seperate deliverables for each of the sub-systems then it would help in scaling only that system as per need as well as any change to it being testable easier. This is the way of working of applications that leverage Microservices architecture. 
