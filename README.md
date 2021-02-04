@@ -20,6 +20,10 @@ Going back to the previous example, on those sale days, chances are, most people
 
 Since all the modules are part of the same deliverable, no matter how docile a change is done to the rating system, there could always be a chance that the ML recommendation system be thrown into regression.
 
+## Problem 3: Single point of failure
+
+Since all the modules are part of the same deliverable, if there is a problem in the Jar/War/Ear in one of the modules, its crash would render the application useless. In essence the failure is global -> Single point of failure.
+
 # Enter Microservices
 
 One solution to solving this problem is via Microservices. In our example, instead of having a single bundled file, if we have seperate deliverables for each of the sub-systems then it would help in scaling only that system as per need as well as any change to it being testable easier. This is the way of working of applications that leverage Microservices architecture.
@@ -74,6 +78,10 @@ This is the publisher/subscribe design pattern.
 Using OAuth 2.0 which prevents credential sharing.
 Authentication to be done at API Gateway.
 When implementing custom authentication schemes, prefer JWT.
+
+# Data Management
+CQRS - Command ( alter data ) Query ( retrieve data ) Responsibility Segregation
+SAGA Pattern - when a business scenario needs data from two or more Microservices. Choreography or Orchestration based approaches.
 
 # Key Practises
 ## Logging
