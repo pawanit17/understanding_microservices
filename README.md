@@ -10,6 +10,8 @@ However, if you consider products/websites like Amazon or Netflix, their demand 
 
 This level of surge means that the team at Amazon should be prepared for such huge spikes as well in advance. In other words, their application has to scale to support users. Interesting to note that an average user waits for 2 seconds ( source: https://www.researchgate.net/publication/220893869_A_Study_on_Tolerable_Waiting_Time_How_Long_Are_Web_Users_Willing_to_Wait ) for an application result and leaves the page after that. So this means this is a serious issue which products like these need to consider.
 
+Microservices are not SOA. SOA is used for integrating multiple different applications. Microservices, on the other hand, are used to decompose a single application into multiple services.  
+
 ## Problem 1: Scaling
 
 In the above examples, it is interesting to note that both Amazon website itself and Netflix are hosted on AWS cloud. You can scale your applications on cloud. But if your application itself is a Monolith, you are losing an important advantage.
