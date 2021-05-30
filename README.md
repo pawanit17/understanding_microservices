@@ -178,26 +178,5 @@ Molecular - NodeJS
 5. Connect to database avoiding single point of failure.
 6. Implement event bus and few critical micro services and define the events during which one Microservice needs to interact with the other one.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Resources
+- https://www.youtube.com/watch?v=nTtK8mZWLkg&list=PLzERW_Obpmv81N-F8yBowb_QHvf9ISG7y
