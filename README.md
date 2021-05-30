@@ -10,6 +10,9 @@ However, if you consider products/websites like Amazon or Netflix, their demand 
 
 This level of surge means that the team at Amazon should be prepared for such huge spikes as well in advance. In other words, their application has to scale to support users. Interesting to note that an average user waits for 2 seconds ( source: https://www.researchgate.net/publication/220893869_A_Study_on_Tolerable_Waiting_Time_How_Long_Are_Web_Users_Willing_to_Wait ) for an application result and leaves the page after that. So this means this is a serious issue which products like these need to consider.
 
+Amazon uses around 100 Microservices to show a web page.
+
+
 ## Examples
 Twitter moved from RoR monolith to Microservices.
 Facebook from PHP monolith to Microservices.
@@ -56,11 +59,13 @@ The main need for Microservices is to prevent a single point of failure for the 
 2.Creates an architecture that is highly scalable.
 3.Reduces the risk of introducing breaking changes.
 4.Smaller, manageable code base for each system which is represented by its Microservice.
+5.If there is a memory leak, it will only impact that one service instance, leaving the rest of the application unaffected.
+6.No long term committment to a single stack - most ML recommendations are best in Python, backends stable in Java etc.
+7.If one Microservice needs to have more RAM memory for doing calculations like cryptography, you can scale them at wish, onto computation heavy EC2 clusters.
 
 ## Antipatterns
 1. Database replication is needed when developing solutions via Microservices. Otherwise it introduces a single point of failure.
 2. Not all applications need to be broken into Microservices - there is no right or wrong software architecture pattern. It is specific to the characteristics of the application that you are developing.
-
 
 # Components of a Microservice based application
 
