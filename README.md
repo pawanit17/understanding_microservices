@@ -185,4 +185,5 @@ Molecular - NodeJS
 # Resources
 - https://www.youtube.com/watch?v=nTtK8mZWLkg&list=PLzERW_Obpmv81N-F8yBowb_QHvf9ISG7y
 - ![image](https://user-images.githubusercontent.com/42272776/120099843-578d6100-c15b-11eb-8336-02fad47e356a.png)
+- https://www.youtube.com/watch?v=o36vWQCRrp0
 
