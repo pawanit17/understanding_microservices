@@ -187,3 +187,10 @@ Molecular - NodeJS
 - ![image](https://user-images.githubusercontent.com/42272776/120099843-578d6100-c15b-11eb-8336-02fad47e356a.png)
 - https://www.youtube.com/watch?v=o36vWQCRrp0
 
+# More details
+
+## CQRS & Event Sourcing
+- Maintain seperate READ and WRITE stores so that the scaling can happen as needed.
+- In Event Sourcing, a complete log of every state change is captured in an event store.
+  - This helps in improving WRITE performance - append only log.
+  - This helps in recreating objects by replaying the events in the event store.
