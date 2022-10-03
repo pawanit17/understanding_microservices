@@ -194,3 +194,8 @@ Molecular - NodeJS
 - In Event Sourcing, a complete log of every state change is captured in an event store.
   - This helps in improving WRITE performance - append only log.
   - This helps in recreating objects by replaying the events in the event store.
+
+- Message Types
+  - Commands - Do something Ex: OpenAccountCommand
+  - Events - Something has happened Ex: AccountOpenedEvent
+  - Queries -
